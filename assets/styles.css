@@ -1,0 +1,355 @@
+:root {
+    --off-white: #faf8f7;
+    --soft-blue: #e7f5ff;
+    --warm-black: #282623;
+    --black: #201e1c;
+    --secondary-blue: #1a9af7;
+    --dark-blue: #194f85;
+    --darker-blue: #0e2d4d;
+    --strong-blue: #0063c6;
+    --apple-green: #a8d104;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    font-family: "DM sans", sans-serif;
+}
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    min-height: 80px;
+    background-color: var(--strong-blue);
+    position: fixed;
+    box-shadow: 0px 2px 10px 0px black;
+    transition: .5s;
+    z-index: 1;
+}
+.navbar {
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+.navbar_list {
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+}
+.navbar_list-item {
+    padding-right: 20px;
+}
+.navbar_list-item a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--off-white);
+    font-weight: 700;
+    text-shadow:  1px 1px 1px var(--black);
+}
+.navbar_icon {
+    width: 100%;
+    height: 25px;
+    background-image: url(./icons/arrow-down.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    display: none;
+}
+.container {
+    color: var(--off-white);
+}
+.about_section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(40,38,35,1) 26%, rgba(32,30,28,1) 69%);    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+.about_section-title {
+    font-size: 4.8rem;
+    color: var(--off-white);
+    text-shadow:  1px 1px 1px var(--black);
+}
+.about_section-description {
+    font-size: 2.4rem;
+    color: var(--strong-blue);
+    text-shadow:  1px 1px 1px var(--black);
+}
+.projects_section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(40,38,35,1) 2%, rgba(14,45,77,1) 15%);
+    text-align: center;
+    margin-top: -5px;
+    padding-bottom: 15px;
+}
+.projects_section-title, .courses_section-title {
+    display: inline-block;
+    padding: 90px 10px 0px 10px;
+    font-size: 3.6rem;
+    border-bottom: 2px var(--off-white) solid;
+}
+.projects_section-grid {
+    display: grid;
+    position: relative;
+    padding: 0 15px 15px 15px;
+    margin: 15px auto;
+    max-width: 1024px;
+    width: 100%;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.projects_section-grid--item {
+    position: relative;
+    width: 100%;
+    max-height: 350px;
+    z-index: 0;
+    transition: .5s;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.projects_section-grid--item div {
+    width: 100%;
+    height: 300px;
+    display: block;
+}
+.projects_section-grid--item a{
+    display: block;
+    width: 100;
+    max-height: 350px;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+}
+.projects_section-grid--item:nth-child(1) {
+    background-image: url(./imgs/batabit.png);
+}
+.projects_section-grid--item:nth-child(2) {
+    background-image: url(./imgs/formulario.png);
+}
+.projects_section-grid--item:nth-child(3) {
+    background-image: url(./imgs/batabit.png);
+}
+.projects_section-grid--item p {
+    display: inline-block;
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--warm-black);
+    color: var(--off-white);
+}
+.projects_section-grid--item:hover {
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.projects_section-grid--item:focus-within {
+    outline: none;
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.grid_item-p--span {
+    color: var(--warm-black);
+    transition: .5s;
+}
+.projects_section-grid--item a:hover .grid_item-p--span {
+    color: var(--strong-blue);
+    transition: .5s;
+}
+.projects_section-button {
+    background-color: var(--warm-black);
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    height: 40px;
+    border-radius: 4px;
+    transition: .5s;
+}
+.projects_section-button:hover {
+    background-color: #35332f;
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.projects_section-button:focus-within {
+    background-color: #35332f;
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.projects_section-button a {
+    color: var(--off-white);
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-decoration: none;
+    font-family: "DM sans", sans-serif;
+    padding: 15px;
+}
+.courses_section {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(180deg, rgba(14,45,77,1) 1%, rgba(40,38,35,1) 12%);
+    text-align: center;
+    padding: 0 15px 15px;
+    margin-top: -5px;
+}
+.courses_section-grid {
+    margin: 0 auto;
+    display: grid;
+    max-width: 1024px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 30px;
+    gap: 10px;
+}
+.courses_section-grid--item button {
+    min-height: 50px;
+    background: none;
+    outline: none;
+    border-radius: 4px;
+    border: none;
+    font-family: "DM sans", sans-serif;
+    width: 100%;
+    transition: .5s;
+}
+.courses_section-grid--item button:hover {
+    background-color: #35332f;
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.courses_section-grid--item button:focus-within {
+    background-color: #35332f;
+    box-shadow: 4px 6px 14px 2px rgba(0,0,0,0.7);
+    transition: .5s;
+}
+.courses_section-grid--item button a {
+    color: var(--off-white);
+    text-decoration: none;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 1.6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.courses_section-grid--item button a img {
+    width: 30px;
+    margin-right: 5px;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    padding: 10px 0 0 0;
+    background-color: var(--apple-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact .contact_list {
+    list-style: none;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.contact .contact_list a {
+    font-family: "DM sans", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--warm-black);
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--apple-green);
+    padding-bottom: 3px;
+    transition: .5s;
+}
+.contact_list-item {
+    margin: 0 0 10px 15px;
+    position: relative;
+}
+.contact_list-item img {
+    display: inline-block;
+    width: 30px;
+    margin-right: 5px;
+}
+.contact_list-item:hover a {
+    border-bottom: 2px solid var(--warm-black);
+    transition: .5s;
+}
+@media screen and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 180px;
+        top: -130px;
+    }
+    .header.is-active {
+        top: 0;
+        transition: .5s;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar_list {
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 8px;
+    }
+    .navbar_list li {
+        padding: 6px;
+    }
+    .navbar_icon {
+        display: flex;
+        transition: .5s;
+        margin-bottom: 10px;
+    }
+    .header.is-active .navbar_icon {
+        transform: rotate(-180deg);
+        transition: .5s;
+    }
+    .about_section-title {
+        font-size: 3.6rem;
+    }
+    .about_section-description {
+        font-size: 2rem;
+    }
+    .projects_section-title, .courses_section-title {
+        font-size: 2.8rem;
+    }
+}
+@media screen and (max-width: 424px) {
+    .about_section-title {
+        font-size: 2.6rem;
+    }
+    .about_section-description {
+        font-size: 1.8rem;
+    }
+    .projects_section-title, .courses_section-title {
+        font-size: 2.4rem;
+    }
+    .courses_section-grid--item button a {
+        font-size: 1.4rem;
+    }
+    .contact .contact_list a {
+        font-size: 1.5rem;
+    }
+}
