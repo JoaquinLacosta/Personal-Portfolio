@@ -133,10 +133,10 @@ html {
     background-image: url(./imgs/batabit.png);
 }
 .projects_section-grid--item:nth-child(2) {
-    background-image: url(./imgs/formulario.png);
+    background-image: url(./imgs/Documentation.PNG);
 }
 .projects_section-grid--item:nth-child(3) {
-    background-image: url(./imgs/batabit.png);
+    background-image: url(./imgs/Rickandmorty.png);
 }
 .projects_section-grid--item p {
     display: inline-block;
