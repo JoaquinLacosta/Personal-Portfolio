@@ -138,6 +138,9 @@ html {
 .projects_section-grid--item:nth-child(3) {
     background-image: url(./imgs/Rickandmorty.png);
 }
+.projects_section-grid--item:nth-child(4) {
+    background-image: url(./imgs/weather-app.png);
+}
 .projects_section-grid--item p {
     display: inline-block;
     position: relative;
