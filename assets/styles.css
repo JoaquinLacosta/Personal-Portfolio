@@ -142,13 +142,16 @@ html {
   background-image: url(./imgs/batabit.png);
 }
 .projects_section-grid--item:nth-child(2) {
-  background-image: url(./imgs/Documentation.PNG);
+  background-image: url(./imgs/Documentation.png);
 }
 .projects_section-grid--item:nth-child(3) {
   background-image: url(./imgs/Rickandmorty.png);
 }
 .projects_section-grid--item:nth-child(4) {
-  background-image: url(./imgs/weather-app.PNG);
+  background-image: url(./imgs/weather-app.png);
+}
+.projects_section-grid--item:nth-child(5) {
+  background-image: url(./imgs/crypto-app.png);
 }
 .projects_section-grid--item p {
   display: inline-block;
