@@ -153,6 +153,9 @@ html {
 .projects_section-grid--item:nth-child(5) {
   background-image: url(./imgs/crypto-app.png);
 }
+.projects_section-grid--item:nth-child(6) {
+  background-image: url(./imgs/Todo-App.png);
+}
 .projects_section-grid--item p {
   display: inline-block;
   position: relative;
